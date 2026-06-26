@@ -120,7 +120,13 @@ git clone --recurse-submodules https://github.com/matsljunggren-concord-design/c
 code concord-poc
 ```
 
-The `.vscode/launch.json` in the repo already includes the **Attach to Electron Binary** configuration. The example scripts from this repo are checked out at `external/` inside the app repo and are already mapped for breakpoints.
+The `.vscode/launch.json` already includes the **Attach to Electron Binary** configuration. The examples are checked out at `external/` inside the app repo and are pre-mapped for breakpoints.
+
+If you prefer to work with the examples repo independently, clone it into a folder named `external` alongside your scripts so the mapping still applies:
+
+```bash
+git clone https://github.com/matsljunggren-concord-design/concord-poc-examples.git external
+```
 
 ### Debugging workflow
 
