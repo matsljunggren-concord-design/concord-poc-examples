@@ -126,7 +126,7 @@ The `.vscode/launch.json` in the repo already includes the **Attach to Electron 
 
 1. **Open the app** — launch Concord POC from Applications normally. The app opens a local debugging port (`localhost:9222`) automatically; nothing extra is needed.
 
-2. **Place your script** in the `external/` folder (this is the [concord-poc-examples](https://github.com/matsljunggren-concord-design/concord-poc-examples) repo checked out as a submodule). Any `.js` file there is already mapped for breakpoints.
+2. **Your script can be in any folder.** If it is inside `external/` (the [concord-poc-examples](https://github.com/matsljunggren-concord-design/concord-poc-examples) submodule), breakpoints work automatically. For scripts elsewhere, see the section below.
 
 3. **Set a breakpoint** — open your `.js` file in VS Code and click the gutter to set a breakpoint.
 
