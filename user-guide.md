@@ -54,13 +54,19 @@ To keep the emulator running alongside a real machine, add `"emulator": true` to
 
 ## Level 2 — Load and run a custom script
 
-Example scripts are available at **[github.com/matsljunggren-concord-design/concord-poc-examples](https://github.com/matsljunggren-concord-design/concord-poc-examples)** — download or clone the repo to get started, or use them as a reference when writing your own.
+Ready-made scripts are at **[github.com/matsljunggren-concord-design/concord-poc-examples](https://github.com/matsljunggren-concord-design/concord-poc-examples)**. Download or clone that repo, then point the app at the folder — or write your own script following the format below.
 
-Scripts live in any folder on your Mac — they do not need to be inside the Concord repo.
+### Running a script
+
+1. Open the **Examples** tab (hamburger menu).
+2. Click **Browse examples folder** and select the folder containing your `.js` files. All valid scripts in the folder (and subfolders) appear in the list.
+3. Select a script and click **Run**.
+
+After editing a script, click **Reload** in the drawer to pick up changes without re-browsing the folder.
 
 ### Script format
 
-A script is a plain `.js` file that exports two things:
+A script is a plain `.js` file with two exports — `metadata` (displayed in the list) and `run` (called when you click Run):
 
 ```js
 export const metadata = {
@@ -92,15 +98,6 @@ The `run` function receives the current machine state and a set of helpers:
 | `api.previewPath(positions)` | Draw a path on the canvas |
 | `api.clearPreview()` | Clear the path preview |
 | `api.dot(position, color?)` | Draw a dot on the canvas |
-
-### Loading scripts in the app
-
-1. Open the **Examples** tab (hamburger menu).
-2. Click **Browse examples folder** and select the folder containing your `.js` files.
-3. All valid scripts in the folder (and subfolders) appear in the list.
-4. Select a script and click **Run**.
-
-After editing a script file, click **Reload** in the drawer to pick up changes without re-browsing.
 
 ---
 
