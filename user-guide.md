@@ -54,6 +54,8 @@ To keep the emulator running alongside a real machine, add `"emulator": true` to
 
 ## Level 2 — Load and run a custom script
 
+Example scripts are available at **[github.com/matsljunggren-concord-design/concord-poc-examples](https://github.com/matsljunggren-concord-design/concord-poc-examples)** — download or clone the repo to get started, or use them as a reference when writing your own.
+
 Scripts live in any folder on your Mac — they do not need to be inside the Concord repo.
 
 ### Script format
