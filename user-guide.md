@@ -104,20 +104,20 @@ This lets you set breakpoints in your `.js` scripts and step through them while 
 
 ### One-time setup
 
-Clone the repo and open it in VS Code:
+Clone the app repo (includes the examples as a submodule) and open it in VS Code:
 
 ```bash
-git clone https://github.com/matsljunggren-concord-design/concord-poc.git
+git clone --recurse-submodules https://github.com/matsljunggren-concord-design/concord-poc.git
 code concord-poc
 ```
 
-The `.vscode/launch.json` in the repo already includes the **Attach to Electron Binary** configuration.
+The `.vscode/launch.json` in the repo already includes the **Attach to Electron Binary** configuration. The example scripts from this repo are checked out at `external/` inside the app repo and are already mapped for breakpoints.
 
 ### Debugging workflow
 
 1. **Open the app** — launch Concord POC from Applications normally. The app opens a local debugging port (`localhost:9222`) automatically; nothing extra is needed.
 
-2. **Place your script** in the `external/` folder inside the repo (or any folder — but `external/` is already mapped for breakpoints).
+2. **Place your script** in the `external/` folder (this is the [concord-poc-examples](https://github.com/matsljunggren-concord-design/concord-poc-examples) repo checked out as a submodule). Any `.js` file there is already mapped for breakpoints.
 
 3. **Set a breakpoint** — open your `.js` file in VS Code and click the gutter to set a breakpoint.
 
@@ -129,7 +129,7 @@ The `.vscode/launch.json` in the repo already includes the **Attach to Electron 
 
 ### Breakpoints in scripts outside `external/`
 
-Breakpoints work out of the box for scripts in the repo's `external/` folder. For scripts in other locations, symlink your folder into `external/`:
+Breakpoints work out of the box for scripts in `external/`. For scripts in other locations, symlink your folder into `external/`:
 
 ```bash
 ln -s /path/to/your/scripts external/my-scripts
