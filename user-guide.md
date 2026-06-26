@@ -21,7 +21,17 @@ The app starts in **emulator mode** by default — no real machine required. You
 
 ### Connecting to a real machine
 
-Use **Help → Show Config File in Finder**. This creates a template config and opens it in Finder. Edit it with any text editor:
+A certified **Concord controller** is required. The WebSocket address is printed on the label attached to the controller — it looks like `your-robot.local`.
+
+**Before connecting, verify the controller is reachable** by opening its web endpoint in a browser:
+
+```
+http://your-robot.local/
+```
+
+If the page loads, the controller is online and ready. If it doesn't, check that the controller is powered on and that your computer is on the same network.
+
+Once confirmed, use **Help → Show Config File in Finder**. This creates a template config and opens it in Finder. Edit it with any text editor, replacing `your-robot.local` with the address from your controller's label:
 
 ```json
 {
