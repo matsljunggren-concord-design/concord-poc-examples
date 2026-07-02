@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Concord POC app",
+      "type": "pwa-chrome",
+      "request": "attach",
+      "port": 9222,
+      "timeout": 10000,
+      "pathMapping": {
+        "/__external_examples__/external": "${workspaceFolder}"
+      },
+      "sourceMaps": true
+    }
+  ]
+}
